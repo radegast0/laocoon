@@ -5,7 +5,7 @@ import Laocoon from './Laocoon'
 const Experience = () => {
   return (
     <>
-     <Environment background files={'./overcast_soil_puresky_4k.hdr'} />   
+     <Environment backgroundIntensity={0.1} environmentIntensity={1.5} background files={'./overcast_soil_puresky_4k.hdr'} />   
      <Laocoon />
      
      <OrbitControls />

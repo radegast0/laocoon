@@ -13,13 +13,13 @@ function App() {
 
 	return (
 		<>
-				<Canvas
-					camera={{
-						position: [0, -2, 6],
-					}}
-				>
-					<Experience />
-				</Canvas>
+			<Canvas
+				camera={{
+					position: [0, -2, 6],
+				}}
+			>
+				<Experience />
+			</Canvas>
 			{/* <Layer handlePartClick={handlePartClick} /> */}
 		</>
 	);
