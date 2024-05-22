@@ -4,10 +4,8 @@
 
 html,
 body {
-	margin: 0;
-	padding: 0;
-	background-color: gray;
+	@apply m-0 p-0 bg-[#5a5856]
 }
 #root {
-	@apply fixed top-0 left-0 z-0 w-full h-full bg-white ; 
+	@apply fixed top-0 left-0 z-0 w-dvw h-dvh ; 
 }

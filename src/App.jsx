@@ -1,26 +1,29 @@
-import React, { useState, Suspense } from 'react';
 import { Canvas } from '@react-three/fiber';
-// import './index.css';
-import Layer from './Layer.jsx';
 import Experience from './Experience.jsx';
+import { Suspense, useState } from 'react';
 import { Loader } from '@react-three/drei';
+import Layer from './Layer.jsx';
 
 function App() {
-	// const [activePart, setActivePart] = useState(0);
-	// const handlePartClick = (part) => {
-	// 	setActivePart(part);
-	// };
+	const [activePart, setActivePart] = useState(0);
+	const handlePartClick = (part) => {
+		setActivePart(part);
+	};
 
 	return (
 		<>
+			<Loader containerStyles={{ backgroundColor: '#5a5856' }} />
 			<Canvas
 				camera={{
+					fov: 70,
 					position: [0, -2, 6],
 				}}
 			>
-				<Experience />
+				<Suspense>
+					<Experience activePart={activePart} />
+				</Suspense>
 			</Canvas>
-			{/* <Layer handlePartClick={handlePartClick} /> */}
+			<Layer handlePartClick={handlePartClick} />
 		</>
 	);
 }

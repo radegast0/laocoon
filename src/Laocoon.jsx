@@ -8,7 +8,6 @@ export default function Laocoon(props) {
 	const { nodes, materials } = useGLTF('./laocoon-compressed.glb');
 	return (
 		<Center
-			// rotation={[0, Math.PI / 4, 0]}
 			scale={0.25}
 			{...props}
 			dispose={null}
@@ -16,7 +15,6 @@ export default function Laocoon(props) {
 			<mesh
 				geometry={nodes.Object_2.geometry}
 				material={materials.None}
-				position={[-0.348, -13.822, 14.17]}
 				rotation={[-Math.PI, Math.PI / 2, 0]}
 			/>
 		</Center>

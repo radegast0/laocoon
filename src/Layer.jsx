@@ -21,18 +21,18 @@ const Layer = ({ handlePartClick }) => {
     }, [activePart]);
 
     return (
-        <div className="z-10 absolute top-0 left-0 text-gray w-full h-full">
-            <div className="flex flex-row justify-center gap-12">
-                <button onClick={() => handleClick(1)}>Laocoön </button>
-                <button onClick={() => handleClick(2)}>Antiphantes </button>
-                <button onClick={() => handleClick(3)}>Thymbraeus </button>
+        <div className="z-10 fixed top-0 left-0 text-white w-dvw h-dvh">
+            <div className="flex flex-row h-full items-end justify-center text-sm md:text-xl py-8 gap-12">
+                <button className='hover:text-gray-300' onClick={() => handleClick(1)}>Laocoön </button>
+                <button className='hover:text-gray-300' onClick={() => handleClick(2)}>Antiphantes </button>
+                <button className='hover:text-gray-300' onClick={() => handleClick(3)}>Thymbraeus </button>
             </div>
             <button
                 ref={resetButtonRef}
                 onClick={() => handleClick(0)}
-                className="opacity-0 display-none rounded-full mt-12 mx-auto"
+                className="opacity-0 text-5xl display-none  fixed top-12 right-12"
             >
-                reset
+                &#10005;
             </button>
         </div>
     );
