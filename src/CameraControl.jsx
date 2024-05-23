@@ -13,8 +13,8 @@ const cameraConfigurations = {
         duration: 1.25
     },
     3: {
-        target: { x: 1.60, y: 0.40, z: -0.50 },
-        position: { x: 0.98, y: 2.52, z: 1.65 },
+        target: { x: 1.94, y: 0, z: -0.50 },
+        position: { x: 1.5, y: 2.52, z: 2.55 },
         duration: 1.25
     },
     default: {
