@@ -3,6 +3,7 @@ import Experience from './Experience.jsx';
 import { Suspense, useState } from 'react';
 import { Loader } from '@react-three/drei';
 import Layer from './Layer.jsx';
+import './index.css';
 
 function App() {
 	const [activePart, setActivePart] = useState(0);
@@ -14,10 +15,8 @@ function App() {
 		<>
 			<Loader containerStyles={{ backgroundColor: '#5a5856' }} />
 			<Canvas
-				camera={{
-					fov: 70,
-					position: [0, -2, 6],
-				}}
+				style={{ position: 'absolute', inset: 0 }}
+				camera={{ fov: 70, position: [0, -2, 6] }}
 			>
 				<Suspense>
 					<Experience activePart={activePart} />

@@ -75,29 +75,40 @@ const Layer = ({ handlePartClick }) => {
 	}, [activePart]);
 
 	return (
-		<div className="fixed top-0 left-0 h-dvh w-dvw text-white">
-			<div className="max-w-5xl container flex flex-col mx-auto h-full">
-				<div className="flex-1">
-					<div className="w-full h-full">
-						<div
-							ref={text1}
-							className="text-center p-12"
-						>
-							Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-							tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-							veniam, quis nostrud exercitation ullamco
-						</div>
-						<div className="flex flex-row justify-between">
+		<div className="absolute inset-0 text-white font-mono">
+			<div className="max-w-5xl mx-auto">
+				<div className="flex justify-end">
+					<button
+						className="opacity-0 text-3xl font-extrabold p-12 hover:text-gray-300 transition-colors"
+						ref={resetButtonRef}
+						onClick={() => handleClick(0)}
+					>
+						&#10005;
+					</button>
+				</div>
+				<div className="">
+					<div
+						ref={text1}
+						className=" text-right max-w-[512px] mx-auto px-4 text-base lg:text-2xl font-thin"
+					>
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+						tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+						veniam, quis nostrud exercitation ullamco
+					</div>
+					<div className="flex">
+						<div className="w-1/2 mr-auto">
 							<div
 								ref={text2}
-								className="text-start p-12"
+								className="text-start text-balance md:p-12 p-4 text-base lg:text-2xl"
 							>
 								laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
 								in reprehenderit in voluptate velit esse cillum dolore eu
 							</div>
+						</div>
+						<div className="w-1/2 ml-auto">
 							<div
 								ref={text3}
-								className="text-end p-12"
+								className="text-end text-pretty md:p-12 p-4 text-base lg:text-2xl"
 							>
 								fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident,
 								sunt in culpa qui officia deserunt mollit anim id est laborum.
@@ -105,34 +116,29 @@ const Layer = ({ handlePartClick }) => {
 						</div>
 					</div>
 				</div>
-				<div className="flex flex-row items-center justify-center text-sm md:text-xl py-8 gap-12">
-					<button
-						className="hover:text-gray-300"
-						onClick={() => handleClick(1)}
-					>
-						Laocoön{' '}
-					</button>
-					<button
-						className="hover:text-gray-300"
-						onClick={() => handleClick(2)}
-					>
-						Antiphantes{' '}
-					</button>
-					<button
-						className="hover:text-gray-300"
-						onClick={() => handleClick(3)}
-					>
-						Thymbraeus{' '}
-					</button>
+				<div className="fixed font-serif sm:tracking-widest bottom-0 left-0 w-full">
+					<div className="flex flex-row items-center justify-center  text-sm sm:text-base md:text-xl lg:text-2xl py-8 gap-12">
+						<button
+							className="hover:text-gray-300 transition-all"
+							onClick={() => handleClick(1)}
+						>
+							Laocoön
+						</button>
+						<button
+							className="hover:text-gray-300 transition-all"
+							onClick={() => handleClick(2)}
+						>
+							Antiphantes
+						</button>
+						<button
+							className="hover:text-gray-300 transition-all"
+							onClick={() => handleClick(3)}
+						>
+							Thymbraeus
+						</button>
+					</div>
 				</div>
 			</div>
-			<button
-				ref={resetButtonRef}
-				onClick={() => handleClick(0)}
-				className="opacity-0 text-2xl md:text-3xl lg:text-4xl fixed md:top-12 md:right-12 top-4 font-extrabold right-4"
-			>
-				&#10005;
-			</button>
 		</div>
 	);
 };
