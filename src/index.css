@@ -9,4 +9,5 @@ html, body {
 }
 ::selection {
   background: #5a5856;
+  color: #000000;
 }
