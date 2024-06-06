@@ -4,7 +4,7 @@ import { Suspense, useState } from 'react';
 import { Loader } from '@react-three/drei';
 import Layer from './Layer.jsx';
 import './index.css';
-import { Analytics } from "@vercel/analytics/react"
+// import { Analytics } from "@vercel/analytics/react"
 
 function App() {
 	const [activePart, setActivePart] = useState(0);
@@ -24,7 +24,7 @@ function App() {
 				</Suspense>
 			</Canvas>
 			<Layer handlePartClick={handlePartClick} />
-			<Analytics />
+			{/* <Analytics /> */}
 		</>
 	);
 }
